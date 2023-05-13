@@ -19,7 +19,7 @@ services:
     depends_on:
       - influxdb
     environment:
-      - INFLUXDB_URL=http://influxdb:8087
+      - INFLUXDB_URL=http://192.168.2.150:8087
       - INFLUXDB_USERNAME=${INFLUXDB_USERNAME}
       - INFLUXDB_PASSWORD=${INFLUXDB_PASSWORD}
   grafana:
