@@ -3,7 +3,7 @@ services:
   influxdb:
     image: influxdb:latest
     ports:
-      - '8086:8086'
+      - '8087:8086'
     volumes:
       - influxdb-storage:/var/lib/influxdb
     environment:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - influxdb
     environment:
-      - INFLUXDB_URL=http://influxdb:8086
+      - INFLUXDB_URL=http://influxdb:8087
       - INFLUXDB_USERNAME=${INFLUXDB_USERNAME}
       - INFLUXDB_PASSWORD=${INFLUXDB_PASSWORD}
   grafana:
